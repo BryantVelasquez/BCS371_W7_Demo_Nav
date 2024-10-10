@@ -62,6 +62,13 @@ fun Navigation() {
             SecondScreen(navController)
         }
 
+        composable("app_screen") {
+            gpaappFun(navController)
+        }
+
+        composable("pizza_screen") {
+            PizzaPartyScreen(navController)
+        }
         // ToDo 7: Add more nav screens here for the pizza party and gpa calculator
 
 
@@ -77,7 +84,7 @@ fun FirstScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally){
             Text(text = "First Screen")
 
-            Button(onClick = { navController.navigate("second_screen") }) {
+            Button(onClick = { navController.navigate("pizza_screen") }) {
                 Text(text ="Go to Second Screen")
             }
 
