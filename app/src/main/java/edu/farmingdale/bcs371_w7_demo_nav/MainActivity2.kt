@@ -52,6 +52,7 @@ class MainActivity2 : ComponentActivity() {
 @Composable
 fun BasicOperations(name: String, modifier: Modifier = Modifier) {
     val  context = LocalContext.current
+    var chcked by remember { mutableStateOf(true)}
 
     Column {
         Spacer(modifier = Modifier.padding(50.dp))
@@ -93,8 +94,8 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
 
         // ToDo 5: This switch is not working fix it
         Switch(
-            checked = true,
-            onCheckedChange = {  },
+            checked = chcked,
+            onCheckedChange = { chcked = it },
             modifier = Modifier.padding(10.dp),
         )
         // ToDo 6: when the switch is off, disable the buttons
