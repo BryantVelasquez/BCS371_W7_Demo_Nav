@@ -92,13 +92,11 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
 
 
 
-        // ToDo 5: This switch is not working fix it
         Switch(
             checked = chcked,
             onCheckedChange = { chcked = it },
             modifier = Modifier.padding(10.dp),
         )
-        // ToDo 6: when the switch is off, disable the buttons
     }
 
 
